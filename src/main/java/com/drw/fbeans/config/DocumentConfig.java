@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class DocumentConfig {
 
-    @Bean
+    @Bean(name = "document")
     public FactoryBean<?> factoryBean(){
         final ServiceLocatorFactoryBean bean = new ServiceLocatorFactoryBean();
         bean.setServiceLocatorInterface(DocumentServiceRegistry.class);

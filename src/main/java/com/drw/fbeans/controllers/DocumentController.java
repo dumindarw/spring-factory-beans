@@ -15,7 +15,7 @@ public class DocumentController {
     DocumentServiceRegistry documentServiceRegistry;
 
 
-    @GetMapping(value="/upload/{docName}")
+    @PostMapping(value = "/upload/{docName}")
     public ResponseEntity<String> uploadDocument(@PathVariable("docName") String docName, @RequestParam("file") MultipartFile file){
 
 
